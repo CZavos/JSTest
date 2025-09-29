@@ -19,14 +19,23 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
-console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let result = "5" - 2;
+console.log("The result is: " + result);//This converts it implicitly to a string with concatenation
+
+let isValid = false //to make false into a boolean makes it a truthy
 if (isValid) {
     console.log("This is valid!");
 }
 
-let age = "25";
+
+let age = Number("25");//change the string to a number
 let totalAge = age + 5;
-console.log("Total Age: " + totalAge);
+console.log("Total Age: " + totalAge);//This converts it implicitly to a string with concatenation
+
+let score = 42;
+let scoreText = String(score);  // Explicitly converting number to string
+console.log(scoreText + " points");  // Output: "42 points"
+
+let total = "10" - 5; // implicit conversion to Number
+console.log(total);  // Output: 5
